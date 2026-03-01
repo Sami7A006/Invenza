@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invenza 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="page-width nav-inner">
+      <a href="#" class="nav-logo" onclick="goHome(); return false;" aria-label="Invenza 2026 Home">
+        <img src="assets/invenza-logo.png" alt="INVENZA' 26" class="nav-logo-img">
+        <span class="nav-brand-text">Invenza’26</span>
+      </a>
+      <span class="nav-byline">Organized by <strong><a href="https://www.instagram.com/aiml.club.gcet/" target="_blank"
+            rel="noopener noreferrer" class="nav-instagram-link">AIML-CLUB</a></strong></span>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <div class="hero-gradient-orb hero-gradient-orb-1"></div>
+      <div class="hero-gradient-orb hero-gradient-orb-2"></div>
+      <div class="hero-gradient-orb hero-gradient-orb-3"></div>
+    </div>
+    <div class="page-width">
+      <div class="hero-glass-card">
+        <h1 class="hero-title">Innovate. Impact. Inspire.</h1>
+        <p class="hero-subtitle">Present impactful ideas for real-world challenges.</p>
+        <div class="hero-logo-curved-wrap">
+          <img src="assets/invenza-logo.png" alt="INVENZA' 26" class="hero-logo-curved">
+        </div>
+        <div class="hero-countdown-wrap">
+          <p id="countdown-label" class="hero-countdown-label">Time left</p>
+          <div class="hero-countdown">
+            <div class="countdown-unit">
+              <span id="countdown-days" class="countdown-value">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-hours" class="countdown-value">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-minutes" class="countdown-value">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+              <span id="countdown-seconds" class="countdown-value">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+         <a href="https://events.studenttribe.in/event/69a3fba12aa8ba78563c55a6" target="_blank" class="btn hero-cta"
+            id="registerIdeathonBtn">Register for Ideathon</a>
+          <button type="button" onclick="window.location.href='domains.html'" class="btn-secondary hero-cta">Explore
+            Domains</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-section">
+    <div class="page-width">
+      <h2 class="about-heading">About Invenza 2026</h2>
+      <div class="about-heading-accent"></div>
+      <p class="about-description">Invenza 2026 is an ideathon focused on innovation, sustainability, entrepreneurship,
+        and impactful solutions for real-world challenges. Join students from across the country to present
+        transformative ideas that can shape tomorrow.</p>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon about-card-icon-target">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h3 class="about-card-title">Innovation Focused</h3>
+          <p class="about-card-desc">Present groundbreaking ideas that address critical challenges</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon about-card-icon-collab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="about-card-title">Collaborative</h3>
+          <p class="about-card-desc">Work with diverse teams to create impactful solutions</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon about-card-icon-recognition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+            </svg>
+          </div>
+          <h3 class="about-card-title">Recognition</h3>
+          <p class="about-card-desc">Showcase your ideas to industry leaders and win prizes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview-section">
+    <div class="page-width">
+      <h2 class="overview-heading">Rules & How It Works</h2>
+      <div class="about-heading-accent"></div>
+      <div class="overview-cards">
+        <div class="overview-card">
+          <h3 class="overview-card-title">IDEAS FIRST</h3>
+          <p class="overview-card-desc">A working prototype is required to support your pitch. Even a basic functional
+            version is enough.</p>
+        </div>
+        <div class="overview-card">
+          <h3 class="overview-card-title">TIME FOR TEAMS</h3>
+          <p class="overview-card-desc"><strong>10-Min Slots</strong><br>Each team is given a 10-minute slot (6 min
+            pitch + 4 min Q&A).</p>
+        </div>
+        <div class="overview-card">
+          <h3 class="overview-card-title">PRESENTATION STYLE</h3>
+          <p class="overview-card-desc">Use a PPT & prototype demo. A working prototype adds clarity.</p>
+        </div>
+      </div>
+      <div class="overview-note">
+        <p><strong>No experience needed.</strong> No technical background required. If you can think and speak - you can
+          compete. The best ideas come from the most unexpected places. Yours could be next.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="page-width">
+      <h2 class="timeline-heading">Ideathon Schedule</h2>
+      <div class="about-heading-accent"></div>
+      <div id="timelineList" class="timeline-list" aria-label="Event schedule"></div>
+    </div>
+  </section>
+
+  <section class="prize-section">
+    <div class="page-width">
+      <h2 class="prize-heading">Prize Pool</h2>
+      <div class="about-heading-accent"></div>
+      <p class="prize-intro">Win exciting prizes and recognition for your innovative solutions.</p>
+      <div class="prize-cards">
+        <div class="prize-card prize-card-1">
+          <span class="prize-rank">1st</span>
+          <h3 class="prize-title">First Prize</h3>
+          <p class="prize-desc">₹20,000</p>
+        </div>
+        <div class="prize-card prize-card-2">
+          <span class="prize-rank">2nd</span>
+          <h3 class="prize-title">Second Prize</h3>
+          <p class="prize-desc">₹15,000</p>
+        </div>
+        <div class="prize-card prize-card-3">
+          <span class="prize-rank">3rd</span>
+          <h3 class="prize-title">Third Prize</h3>
+          <p class="prize-desc">₹10,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <p class="footer-credit">Invenza 2026 — Organized by <strong>AIML-CLUB</strong></p>
+      <a href="https://www.instagram.com/aiml.club.gcet/" target="_blank" rel="noopener noreferrer"
+        class="footer-instagram" aria-label="Follow AIML-CLUB on Instagram">
+        <svg class="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

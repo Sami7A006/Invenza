@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register — Invenza 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+
+  <nav>
+    <div class="page-width nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Invenza 2026 Home">
+        <img src="assets/invenza-logo.png" alt="INVENZA' 26" class="nav-logo-img">
+        <span class="nav-brand-text">Invenza 2026</span>
+      </a>
+      <span class="nav-byline">Organized by <strong><a href="https://www.instagram.com/aiml.club.gcet/" target="_blank"
+            rel="noopener noreferrer" class="nav-instagram-link">AIML-CLUB</a></strong></span>
+    </div>
+  </nav>
+
+  <main class="register-main">
+    <div class="page-width register-width">
+      <div id="registerHeader">
+        <h1 class="register-heading">Registration</h1>
+        <p id="registerProblemDisplay" class="register-problem-display"></p>
+      </div>
+
+      <div id="registerFormWrap" class="register-form-wrap">
+        <form id="registerForm" class="register-form">
+
+          <label class="register-label" for="teamName">Team Name <span class="required">*</span></label>
+          <input type="text" id="teamName" name="team_name" class="register-input" required autocomplete="off">
+
+          <label class="register-label" for="leaderName">Team Leader Name <span class="required">*</span></label>
+          <input type="text" id="leaderName" name="leader_name" class="register-input" required autocomplete="off">
+
+          <label class="register-label" for="teamCount">Number of team members <span class="required">*</span></label>
+          <input type="number" id="teamCount" name="number_of_team_members" class="register-input" required min="1"
+            max="6" value="1" autocomplete="off">
+
+          <label class="register-label" for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" class="register-input" required autocomplete="email">
+
+          <label class="register-label" for="phone">Phone <span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" class="register-input" required autocomplete="tel">
+
+          <input type="hidden" name="selected_problem" id="selectedProblem" value="">
+          <input type="hidden" name="domain" id="domain" value="">
+          <input type="hidden" name="team_id" id="teamID" value="">
+
+          <p id="registerError" class="register-error hidden" role="alert"></p>
+          <button type="submit" id="registerSubmit" class="btn register-submit">Register</button>
+        </form>
+      </div>
+
+      <div id="registerSuccess" class="register-success hidden">
+        <div class="register-success-icon" aria-hidden="true">✓</div>
+        <h2 class="register-success-title">Registration submitted</h2>
+        <p class="register-success-text">Thank you for registering. We have received your details for the selected
+          problem.</p>
+        <a href="index.html" class="btn">Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <p class="footer-credit">Invenza 2026 — Organized by <strong>AIML-CLUB</strong></p>
+      <a href="https://www.instagram.com/aiml.club.gcet/" target="_blank" rel="noopener noreferrer"
+        class="footer-instagram" aria-label="Follow AIML-CLUB on Instagram">
+        <svg class="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="register.js"></script>
+</body>
+
+</html>

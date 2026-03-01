@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domains - Invenza 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="domains-page">
+
+  <nav>
+    <div class="page-width nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Invenza 2026 Home">
+        <img src="assets/invenza-logo.png" alt="INVENZA' 26" class="nav-logo-img">
+        <span class="nav-brand-text">Invenza’26</span>
+      </a>
+      <span class="nav-byline">Organized by <strong><a href="https://www.instagram.com/aiml.club.gcet/" target="_blank"
+            rel="noopener noreferrer" class="nav-instagram-link">AIML-CLUB</a></strong></span>
+    </div>
+  </nav>
+
+  <!-- DOMAINS SECTION -->
+  <section id="domains" class="hidden">
+    <div class="page-width">
+      <h2>Select a Domain</h2>
+      <div id="domainList" class="card-container"></div>
+      <button type="button" onclick="window.location.href='index.html'" class="back-btn">Back to Home</button>
+    </div>
+  </section>
+
+  <!-- PROBLEMS SECTION -->
+  <section id="problems" class="hidden">
+    <!-- List view: 10 problem names per page -->
+    <div id="problemListView" class="page-width problem-list-view">
+      <h2 id="problemDomainTitle"></h2>
+      <p class="page-info" id="pageInfo"></p>
+      <div id="problemNameList" class="problem-name-list"></div>
+      <div class="pagination">
+        <button type="button" id="prevPageBtn" onclick="prevPage()" class="nav-btn">Previous</button>
+        <button type="button" id="nextPageBtn" onclick="nextPage()" class="nav-btn nav-btn-primary">Next</button>
+      </div>
+      <button type="button" onclick="showDomains()" class="back-btn">Back to Domains</button>
+    </div>
+    <!-- Detail view: one problem full details -->
+    <div id="problemDetailView" class="page-width problem-detail-view hidden">
+      <h2 id="problemDetailDomainTitle"></h2>
+      <p class="problem-counter" id="problemCounter"></p>
+      <h3 id="problemTitle" class="problem-title"></h3>
+      <div class="detail-block">
+        <p class="detail-label">Background</p>
+        <p id="problemBackground"></p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-label">Problem Statement</p>
+        <p id="problemStatement"></p>
+      </div>
+      <div class="problem-nav">
+        <button type="button" id="prevBtn" onclick="prevProblem()" class="nav-btn">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextProblem()" class="nav-btn nav-btn-primary">Next</button>
+      </div>
+      <button type="button" id="registerCtaBtn" onclick="openRegisterModal()" class="btn register-cta">Select &
+        Register</button>
+      <button type="button" onclick="backToList()" class="back-btn">Back to List</button>
+    </div>
+  </section>
+
+  <!-- Confirmation modal before redirect to registration -->
+  <div id="registerModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <h3 id="modalTitle" class="modal-title">Confirm registration</h3>
+      <p class="modal-problem-name" id="modalProblemName"></p>
+      <p class="modal-hint">You will be taken to the registration form for this problem.</p>
+      <div class="modal-actions">
+        <button type="button" onclick="closeRegisterModal()" class="nav-btn">Cancel</button>
+        <button type="button" onclick="confirmRegisterRedirect()" class="btn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <p class="footer-credit">Invenza 2026 — Organized by <strong>AIML-CLUB</strong></p>
+      <a href="https://www.instagram.com/aiml.club.gcet/" target="_blank" rel="noopener noreferrer"
+        class="footer-instagram" aria-label="Follow AIML-CLUB on Instagram">
+        <svg class="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize domains listing on page load if we are on the domains page
+    document.addEventListener("DOMContentLoaded", function () {
+      // If not already showing a specific problem, default to domains
+      if (!window.location.hash || window.location.hash === "#domains") {
+        showDomains();
+      }
+    });
+  </script>
+</body>
+
+</html>
